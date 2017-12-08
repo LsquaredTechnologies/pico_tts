@@ -81,8 +81,8 @@ const char * PICO_PHONEME_CLOSE_TAG         = "'/>";
 
 /* supported voices
    Pico does not seperately specify the voice and locale.   */
-const char * picoSupportedLangIso3[]        = { "eng",              "eng",              "deu",              "spa",              "fra",              "ita" };
-const char * picoSupportedCountryIso3[]     = { "USA",              "GBR",              "DEU",              "ESP",              "FRA",              "ITA" };
+const char * picoSupportedLangIso3[]        = { "en",               "en",               "de",               "es",               "fr",               "it" };
+const char * picoSupportedCountryIso3[]     = { "US",               "GB",               "DE",               "ES",               "FR",               "IT" };
 const char * picoSupportedLang[]            = { "en-US",            "en-GB",            "de-DE",            "es-ES",            "fr-FR",            "it-IT" };
 const char * picoInternalLang[]             = { "en-US",            "en-GB",            "de-DE",            "es-ES",            "fr-FR",            "it-IT" };
 const char * picoInternalTaLingware[]       = { "en-US_ta.bin",     "en-GB_ta.bin",     "de-DE_ta.bin",     "es-ES_ta.bin",     "fr-FR_ta.bin",     "it-IT_ta.bin" };
