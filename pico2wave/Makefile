@@ -1,9 +1,9 @@
 CC = g++
-CFLAGS = -fPIC -g -O2 -Wall -Wextra
+CFLAGS = -fPIC -g -O2 -Wall -Wextra -DDEBUG
 RM = rm -f
 
 INCS = -I./include -I../compat/include -I../libsvoxpico/include
-LIBS = -L../libsvoxpico/obj -lsvoxpico -lexpat
+LIBS = -L../libsvoxpico/obj -lsvoxpico -lexpat -lFLAC -logg -lvorbis -lvorbisenc -lvorbisfile -lsndfile
 
 SRCDIR = ./src
 OBJDIR = ./obj
@@ -17,11 +17,9 @@ OBJS = $(SRCS:$(SRCDIR)/%.cpp=$(OBJDIR)/%.o)
 .PHONY: all
 all: 
 	@mkdir -p $(BINDIR)
-	$(CC) $(SRCS) $(INCS) $(LIBS) -fpermissive -o $(BINDIR)/$(TARGET)
-	$(CC) $(SRCS) $(INCS) -static $(LIBS) -fpermissive -o $(BINDIR)/$(TARGET)-static
+	$(CC) -DDEBUG $(SRCS) $(INCS) $(LIBS) -fpermissive -o $(BINDIR)/$(TARGET)
 
 .PHONY: clean
 clean:
 	$(RM) $(BINDIR)/$(TARGET)
-	$(RM) $(BINDIR)/$(TARGET)-static
 	@rmdir $(BINDIR)
