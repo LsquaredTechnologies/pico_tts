@@ -1,6 +1,6 @@
 TOPTARGETS := all clean
 
-SUBDIRS := ./libsvoxpico ./pico
+SUBDIRS := ./libsvoxpico ./pico2wave
 
 $(TOPTARGETS): $(SUBDIRS)
 
